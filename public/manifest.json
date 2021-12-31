@@ -1,0 +1,9 @@
+{
+    "short_name": "Chirala Tourism",
+    "name": "Place to visit in chirala",
+    "icons": [],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
