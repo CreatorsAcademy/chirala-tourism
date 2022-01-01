@@ -7,7 +7,7 @@ import InfoIcon from "@mui/icons-material/Info";
 
 const itemData = [
     {
-        img: "https://images.unsplash.com/photo-1560009014-7400dda58719?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        img: "https://images.unsplash.com/photo-1560009014-7400dda58719",
         title: "Beaches & Resorts",
         author: "@bkristastucchio",
         rows: 2,
@@ -15,23 +15,23 @@ const itemData = [
         featured: true,
     },
     {
-        img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1710&q=80",
+        img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8",
         title: "Foods & Drinks",
         author: "@rollelflex_graphy726",
     },
     {
-        img: "https://images.unsplash.com/photo-1555529771-122e5d9f2341?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
+        img: "https://images.unsplash.com/photo-1555529771-122e5d9f2341",
         title: "Shopping",
         author: "@helloimnik",
     },
     {
-        img: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80",
+        img: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
         title: "Entertainment",
         author: "@nolanissac",
         cols: 2,
     },
     {
-        img: "https://images.unsplash.com/photo-1620108094398-f8d5379369c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1428&q=80",
+        img: "https://images.unsplash.com/photo-1620108094398-f8d5379369c1",
         title: "Must Try",
         author: "Icecream, Panipuri, Badam Milk, CFC",
         cols: 2,
@@ -44,8 +44,8 @@ function Contents() {
             {itemData.map((item) => (
                 <ImageListItem key={item.img}>
                     <img
-                        src={`${item.img}?w=248&fit=crop&auto=format`}
-                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        src={`${item.img}?w=248&h=248&h=240&fit=crop&auto=format`}
+                        srcSet={`${item.img}?w=248&h=240&fit=crop&auto=format&dpr=2 2x`}
                         alt={item.title}
                         loading="lazy"
                     />
