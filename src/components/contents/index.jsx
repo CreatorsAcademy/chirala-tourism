@@ -4,12 +4,13 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
+import { useNavigate } from "react-router-dom";
 
 const itemData = [
     {
         img: "https://images.unsplash.com/photo-1560009014-7400dda58719",
         title: "Beaches & Resorts",
-        author: "@bkristastucchio",
+        category: "BEACHES_RESORTS",
         rows: 2,
         cols: 2,
         featured: true,
@@ -17,28 +18,46 @@ const itemData = [
     {
         img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8",
         title: "Foods & Drinks",
-        author: "@rollelflex_graphy726",
+        category: "FOODS_DRINKS",
     },
     {
         img: "https://images.unsplash.com/photo-1555529771-122e5d9f2341",
         title: "Shopping",
-        author: "@helloimnik",
+        category: "SHOPPING",
     },
     {
         img: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
         title: "Entertainment",
-        author: "@nolanissac",
+        category: "ENTERTAINMENT",
         cols: 2,
     },
     {
         img: "https://images.unsplash.com/photo-1620108094398-f8d5379369c1",
         title: "Must Try",
-        author: "Icecream, Panipuri, Badam Milk, CFC",
+        category: "OTHERS",
         cols: 2,
     },
 ];
 
+function getPageByCategory(category) {
+    switch (category) {
+        case "BEACHES_RESORTS":
+            return "beaches";
+        case "FOODS_DRINKS":
+            return "foods";
+        case "SHOPPING":
+            return "shopping";
+        case "ENTERTAINMENT":
+            return "entertainment";
+        case "OTHERS":
+            return "others";
+        default:
+            return "";
+    }
+}
+
 function Contents() {
+    let navigate = useNavigate();
     return (
         <ImageList>
             {itemData.map((item) => (
@@ -48,6 +67,10 @@ function Contents() {
                         srcSet={`${item.img}?w=248&h=240&fit=crop&auto=format&dpr=2 2x`}
                         alt={item.title}
                         loading="lazy"
+                        onClick={() => {
+                            console.log("clicked");
+                            navigate(`/${getPageByCategory(item.category)}`);
+                        }}
                     />
                     <ImageListItemBar
                         title={item.title}
