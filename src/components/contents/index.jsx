@@ -68,7 +68,6 @@ function Contents() {
                         alt={item.title}
                         loading="lazy"
                         onClick={() => {
-                            console.log("clicked");
                             navigate(`/${getPageByCategory(item.category)}`);
                         }}
                     />
